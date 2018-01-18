@@ -3,7 +3,6 @@
 #include <string.h>
 #include <time.h>
 #include <assert.h>
-kkojoij
 
 #define TEDADE_TEAM_HA 32
 
@@ -55,7 +54,7 @@ struct team_info{
 
 
 
-struct natije_bazi{
+struct natije_bazi_gorohi{
 	short int id_teame_aval;
 	char tedade_gole_zade__teame_aval;
 	
@@ -63,18 +62,33 @@ struct natije_bazi{
 	char tedade_gole_zade__teame_dovom;
 };
 
+struct natije_bazi_hazfi{
+	short int id_teame_aval;
+	char tedade_gole_zade__teame_aval_dar_vaghte_ghanoni;
+	char tedade_gole_zade__teame_aval_dar_vaghte_ezafe;
+	char tedade_gole_zade__teame_aval_dar_vaghte_penalti;
+	
+	short int id_teame_dovom;
+	char tedade_gole_zade__teame_dovom_dar_vaghte_ghanoni;
+	char tedade_gole_zade__teame_dovom_dar_vaghte_ezafe;
+	char tedade_gole_zade__teame_dovom_dar_vaghte_penalti;
+};
+
+
 struct jadvale_natayej{
 	short int ta_marhaleye_chand_pish_rafte;
-	struct natije_bazi dore_avale_gorohi[16]; 
-	struct natije_bazi dore_dovom_gorohi[16]; 
-	struct natije_bazi dore_sevom_gorohi[16];
+	struct natije_bazi_gorohi dore_avale_gorohi[16]; 
+	struct natije_bazi_gorohi dore_dovom_gorohi[16]; 
+	struct natije_bazi_gorohi dore_sevom_gorohi[16];
 	
-	struct natije_bazi dore_yek_hashtome_nahaee[8];  
-	struct natije_bazi dore_yek_chaharome_nahaee[4];  
-	struct natije_bazi dore_nime_nahaee[2]; 
-	struct natije_bazi dore_radebandi_va_final[2]; 
+	struct natije_bazi_hazfi dore_yek_hashtome_nahaee[8];  
+	struct natije_bazi_hazfi dore_yek_chaharome_nahaee[4];  
+	struct natije_bazi_hazfi dore_nime_nahaee[2]; 
+	struct natije_bazi_hazfi dore_radebandi_va_final[2]; 
 	
 } Jadvale_natayej={0};
+
+
 
 
 
@@ -238,8 +252,8 @@ int read_bazikonane_team_and_put_to_struct(){
 		        
 		        
 		        
-		        Team_info[counter].bazikon[i].fitness = 100 ;
-			    Team_info[counter].bazikon[i].form = 100 ;
+		        Team_info[counter].bazikon[i].fitness = 86 ;
+			    Team_info[counter].bazikon[i].form = 86 ;
 			    
 			    
 			    
