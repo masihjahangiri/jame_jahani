@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include <assert.h>
+kkojoij
 
 #define TEDADE_TEAM_HA 32
 
